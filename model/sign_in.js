@@ -1,21 +1,16 @@
 const mongoose = require("mongoose")
-const app  = express()
 
-const userSchema = moongoose.schema({
+
+const userSchema = new mongoose.schema({
     username:{
         type:String,
         unique:true,
         required:true
     },
-    email:{
-        type:String,
-        unique: true,
-        required: true
-    },
     password:{
-type: String,
-required:true
+        type: String,
+         required: true
     }
 })
 
-module.exports = moongoose.module.userSchema()
+module.exports = mongoose.module("sign_in",userSchema)
